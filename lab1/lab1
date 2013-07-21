@@ -1,0 +1,90 @@
+1. When an interactive shell that is not a login shell is started, bash reads and executes commands from .bashrc.
+.bash_profile is invoked before the initial shell to configure it.
+
+2. Submitted as vi_lab
+
+3. 
+-rw-rw-r-- 1 nac78 nac78  8059 Apr  5 18:50 funny
+-rwxrwxr-x 1 nac78 nac78   240 Apr  5 18:50 hello.bash
+
+4. 
+Read, Write permissions to User
+Only Read permissions to everyone else
+
+5.
+Read, write and execute permissions to user, read and execute to everyone else.
+
+6. Yes, I can read funny.
+
+7. Yes, I can read hello.bash 
+
+8. No, i could'nt execute it.
+
+9. chmod 744 hello.bash
+chmod u+x hello.bash
+
+10. It was read only and i couldn't make a change.
+
+11. 
+nac78@tux64-11:~/CS265/lab1$ ls *
+\      annoy.cc  hello.bash  itemList-2cols  TelecomTruths     vi_lab
+annoy  funny     itemList    lab1            UnitTestingPhase
+
+nac78@tux64-11:~/CS265/lab1$ ls a* 
+annoy  annoy.cc
+
+nac78@tux64-11:~/CS265/lab1$ ls *m* 
+itemList  itemList-2cols  TelecomTruths
+
+nac78@tux64-11:~/CS265/lab1$ ls anno? 
+annoy
+
+nac78@tux64-11:~/CS265/lab1$ ls annoy? 
+ls: cannot access annoy?: No such file or directory
+
+12. We had to edit two files named a and space respectively
+
+13. 
+nac78@tux64-11:~/CS265/lab1$ echo Is a < b?
+-bash: b?: No such file or directory
+
+nac78@tux64-11:~/CS265/lab1$ echo "Is a < b?"
+Is a < b?
+
+nac78@tux64-11:~/CS265/lab1$ echo "\$USER is $USER"
+$USER is nac78
+
+nac78@tux64-11:~/CS265/lab1$ echo '\$USER is $USER'
+\$USER is $USER
+
+nac78@tux64-11:~/CS265/lab1$ echo "Today is `date`"
+Today is Fri Apr  5 19:20:44 EDT 2013
+
+nac78@tux64-11:~/CS265/lab1$ echo "Today is $(date)"
+Today is Fri Apr  5 19:20:54 EDT 2013
+
+nac78@tux64-11:~/CS265/lab1$ echo 'Today is `date`'
+Today is `date`
+
+nac78@tux64-11:~/CS265/lab1$ echo -e "Files that start w/e:\n`ls e*`"
+ls: cannot access e*: No such file or directory
+Files that start w/e:
+
+14
+sort without the -n option will sort the list based on the strings value itself.
+sort with the -n option will sort the list based on the numerical values in the text.
+
+15.
+sort -rn itemList-2cols | head -n 8 | less
+
+16.
+lab1.tar.gz is in it's place
+
+17.
+It is now a .tar file
+
+18.
+grep -R 'Vacation' /home/kschmidt/public_html/CS265/Labs/
+
+19.
+find ~/ -name 'lab1'

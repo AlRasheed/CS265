@@ -1,0 +1,18 @@
+#!/bin/bash
+# write a script that looks in the current directory only for mp3 files,
+# breaks the filename out into artist and song title, 
+# creates the appropriate directory (if it doesn't already exist),
+# removes the artist and the first ' - ' from the filename, 
+# and moves it into the directory.
+
+for file in *.mp3; do
+	artist=${file%-*};
+	if [ ! -d "$artist" ]  
+	    then
+		mkdir "$artist"
+	fi
+
+	songname=${file#*-}
+	mv "$file" "$artist/$songname"
+	
+done

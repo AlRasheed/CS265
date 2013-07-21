@@ -1,0 +1,75 @@
+[22:31:53 - nac78@tux64-12 ~/CS265/lab10/Performance]$ time ./sort1 < in.1000 > /dev/null
+
+real    0m0.178s
+user    0m0.172s
+sys     0m0.008s
+[22:31:57 - nac78@tux64-12 ~/CS265/lab10/Performance]$ time ./sort1 < in.10000 > /dev/null
+
+real    0m2.501s
+user    0m2.496s
+sys     0m0.004s
+[22:32:02 - nac78@tux64-12 ~/CS265/lab10/Performance]$ time ./sort1 < in.20000 > /dev/null
+
+real    0m5.800s
+user    0m5.788s
+sys     0m0.004s
+[22:32:12 - nac78@tux64-12 ~/CS265/lab10/Performance]$ time ./sort1 < in.30000 > /dev/null
+
+real    0m9.431s
+user    0m9.417s
+sys     0m0.004s
+[22:32:54 - nac78@tux64-12 ~/CS265/lab10/Performance]$ time ./sort1 < in.40000 > /dev/null
+
+real    0m13.199s
+user    0m13.185s
+sys     0m0.004s
+[22:33:13 - nac78@tux64-12 ~/CS265/lab10/Performance]$ time ./sort1 < in.50000 > /dev/null
+
+real    0m17.055s
+user    0m17.033s
+sys     0m0.012s
+[22:33:37 - nac78@tux64-12 ~/CS265/lab10/Performance]$ time ./sort1 < in.60000 > /dev/null
+
+real    0m21.100s
+user    0m21.089s
+sys     0m0.004s
+
+
+
+
+real    0m0.255s
+user    0m0.232s
+sys     0m0.004s
+
+real    0m3.253s
+user    0m3.232s
+sys     0m0.000s
+
+real    0m7.305s
+user    0m7.264s
+sys     0m0.004s
+
+real    0m11.714s
+user    0m11.673s
+sys     0m0.004s
+
+real    0m16.331s
+user    0m16.277s
+sys     0m0.004s
+
+real    0m21.133s
+user    0m21.073s
+sys     0m0.016s
+
+real    0m26.146s
+user    0m26.106s
+sys     0m0.012s
+
+
+3425457
+45721062
+98107982
+153522280
+210173451
+265180908
+319847373

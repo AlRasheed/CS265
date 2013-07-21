@@ -1,0 +1,10 @@
+0000000000000000000000000000000000000000 e861bf23d094b30d128c6ea8f11e31d7f143beb4 Neil Castelino <nac78@cs.drexel.edu> 1366840332 -0400	commit (initial): initial broken commit
+e861bf23d094b30d128c6ea8f11e31d7f143beb4 4e332c7f3d68dfdffeca73c80096de45f6ebf9d3 Neil Castelino <nac78@cs.drexel.edu> 1366840593 -0400	commit: better
+4e332c7f3d68dfdffeca73c80096de45f6ebf9d3 62975fcabc72dacaf078bd72ed5fa069d7830573 Neil Castelino <nac78@cs.drexel.edu> 1366841298 -0400	commit: much better
+62975fcabc72dacaf078bd72ed5fa069d7830573 796cefb9e7d9d2ddececf32d846205c3cdb87737 Neil Castelino <nac78@cs.drexel.edu> 1366841432 -0400	commit: cleared up stuff
+796cefb9e7d9d2ddececf32d846205c3cdb87737 12cbb6acd4b42f7476dd076a415e49675f780a03 Neil Castelino <nac78@cs.drexel.edu> 1366847020 -0400	commit: almost working. need to trim input to arr:files_other
+12cbb6acd4b42f7476dd076a415e49675f780a03 cfa43deff6a36ba4b876d083c28087af0028c2c2 Neil Castelino <nac78@cs.drexel.edu> 1366847730 -0400	commit: Possibly final?
+cfa43deff6a36ba4b876d083c28087af0028c2c2 f29e3f97057a39d8257185d3d288140d8ffcd96c Neil Castelino <nac78@cs.drexel.edu> 1366848718 -0400	commit: done!
+f29e3f97057a39d8257185d3d288140d8ffcd96c 9a8b931b2ce78f440087a2385a1cd6d13e8827e1 Neil Castelino <nac78@cs.drexel.edu> 1366950857 -0400	commit: Added makefile
+9a8b931b2ce78f440087a2385a1cd6d13e8827e1 896153130828238b812412dede374f4d6daa4107 Neil Castelino <nac78@cs.drexel.edu> 1366995704 -0400	commit: final
+896153130828238b812412dede374f4d6daa4107 e070d50e02aa0430190cb8a223941ab4fd25cc96 Neil Castelino <nac78@cs.drexel.edu> 1366995813 -0400	commit: modified makefile

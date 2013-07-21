@@ -1,0 +1,114 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="en-us">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta http-equiv="Expires" content="no-expire">
+  <meta name="Author" content="Kurt Schmidt">
+	<meta name="Publisher" content="Drexel University">
+	<meta name="Copyright" content="">
+	<meta name="Keywords" content="Programming Techniques Unix">
+	<meta name="Description"
+		content="Assignment for CS265/571 - Adv. Programming Techniques">
+	<meta name="Pagetype" content="Lab">
+	<meta name="Audience" content="All">
+	<link rel='shortcut icon' type='image/gif'
+		href='../../../images/drexel.gif'></link>
+	<script language="JavaScript" src="../courseInfo.js"></script>
+	<script language="JavaScript" src="../Scripts/courseFormat.js"></script>
+  <title>CS 265/571 -- Assignment 3</title>
+</head>
+
+
+<body text="#330099" link="#000066" vlink="#000066" alink="#FF0000"
+	background="../../../images/blueTexture.jpeg">
+
+<h1>Assignment 3</h1>
+
+<h2>Introduction</h2>
+
+<p> You will use inheritance from abstract classes and interfaces in Java to
+describe regular shapes (circle, solid, square) that are to be placed on a
+canvas (some abstract graphics context).  You will also start using
+Javadoc-style comments. </p>
+
+<h2>To do</h2>
+
+<p> Find the following files in
+<tt>~kschmidt/public_html/CS265/Assignments/Java-shapes</tt> : </p>
+
+<ul>
+	<li> <tt><b>RegularShape.java</b></tt> - an abstract base class for
+		shapes, describes behaviors we'd expect of shapes.  No modifications are
+		req'd </li>
+
+	<li> <tt><b>GuiObj.java</b></tt> - an interface, describes behaviors
+		for any closed object that would be placed on a canvas, colored, and
+		moved.  No modifications are req'd </li>
+
+	<li> <tt><b>GuiRegShape.java</b></tt> - A subclass of
+		<tt>RegularShape</tt> that implements the <tt>GuiObj</tt> i/f.  All of
+		the interface can be implemented here.  I've done a little.  <u>You need
+		to fill in the rest.  Search for <tt>TODO</tt> w/in the file</u> </li>
+</ul>
+
+<p> You will provide the following classes, subclasses of
+<tt>GuiRegShape</tt>: </p>
+
+<ul>
+	<li> <tt><b>Circle</b></tt> </li>
+	<li> <tt><b>Triangle</b></tt> </li>
+	<li> <tt><b>Square</b></tt> </li>
+</ul>
+
+<p> Each class will be in its own file, and will supply behavior to the
+previously abstract (undefined) methods.  Also, provide 2 constructors, as
+the <tt>GuiRegShape</tt> class does.  Each file will have Javadoc-formatted
+comments for the class, and for each method and c'tor.  Please use the other
+files as a template. </p>
+
+<p> Finally, you will supply your test driver, that will be filled in as you
+implement each class, above.  To test the virtual methods your code would
+look something like this: </p>
+
+<blockquote><tt>
+<pre>GuiRegShape s = new Square( 3, "square1" ) ;
+s.move( 3, 7 ) ;
+s.color( Color.ORANGE ) ;
+...</pre></tt></blockquote>
+
+<p> The test driver will be in a class called <tt><b>Prog</b></tt> .  You
+should test <i>all</i> of the methods, for each object. </p>
+
+<p> Please be careful when checking float types for equality.  That is,
+<u>don't</u>.  Subtract, look for a very small difference (<b>hint:</b> a
+little helper method here might be a good idea). </p>
+
+<hr>
+<h2>Submission</h2>
+
+<p> This will be submitted via the <tt>submit_cli</tt> utility.  The
+assignment ID is <b>a3</b> . </p>
+
+<p> Submit the following files: </p>
+
+<ul>
+	<li> <tt><b>GuiRegShape.java</b></tt> - the supplied file, w/your
+		modifications </li>
+	<li> <tt><b>Circle.java</b></tt> </li>
+	<li> <tt><b>Triangle.java</b></tt> </li>
+	<li> <tt><b>Square.java</b></tt> </li>
+	<li> <tt><b>Prog.java</b></tt> - class that contains your test
+		<tt>main</tt> method </li>
+	<li> <tt><b>build.xml</b></tt> - ANT file, whose default target will run
+		your test driver.  It will contain another target, <tt>doc</tt>, that
+		will run javadoc on all the source code, publish to HTML.</li>
+	<li> <tt><b>README</b></tt> - <i>optional</i>
+</ul>
+
+<p> Please, to those of you who are Java programmers, don't submit or create
+a nice directory hierarchy (<tt>obj</tt>, <tt>lib</tt>, etc.).  Just a flat
+directory.  We need to grade this. </p>
+
+</body>
+</html>

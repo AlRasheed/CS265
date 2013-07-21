@@ -1,0 +1,73 @@
+1.
+add() will add a new prefix to the suffix table and update the prefix.
+addSuffix() adds the new suffix to the hash table.
+
+2.
+The lookup() searches for a prefix and creates one if the argument "create" is 1. It then returns a pointer to the present prefix or NULL if it doesn't exist.
+generate() and add() call lookup()
+
+3.
+Uploaded as hash.png
+
+4.
+It gives the programmer complete control over the implementation.
+
+5.
+The programmer has to do  a lot more work such as allocating memory, reclaiming memory, creating hash tables, linked lists etc.
+
+6.
+void clean()
+{
+	int i=0;
+	State *sp = NULL;
+	State *temp = NULL;
+	
+	for(i = 0;i<NHASH;i++)
+	{
+		for (sp = statetab[i]; sp != NULL; sp = temp) {
+			temp = sp->next;
+			printf("freed %s and %s\n", sp->pref[0],sp->pref[1]);
+			free(sp);
+		}
+
+	}
+}
+
+
+7.
+Yes it does. I put in a debug statement which tells us what states it frees.
+Difficulties: I had to learn how to delete items from a list.
+
+8.
+We free each string exactly once because once it has been freed, the memory is no longer in the programs stack. If we tried to free it again, it would return an error. For this not to happen, we need to check if the memory has been allocated to the program. If it is, free it. If it isn't, do not.
+
+9.
+Prefixes are stored in a deque. They are stored in a deque as it lets us pop the first element and add a new one to the end. Both in O(1) time.
+
+10.
+A map
+
+11.
+They are stored as a vector of suffixes.
+
+12.
+The C++ STL has various built in datatypes which we can just use. We do not have to create a hash table like we had to in C. It is a lot less work.
+
+13.
+Since we use the STL data structures, we have a lot less control over the implementation than what we had in C.
+
+14.
+The prefixes are stored as tuples
+
+15.
+A dictionary is used for the hash table.
+
+16.
+The suffixes are stored in a list
+
+17.
+The data structure is a little easier to understand.
+
+18.
+We data structure is not as robust as the C++ STLs data structures.
+

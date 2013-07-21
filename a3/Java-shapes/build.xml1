@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<project default="Prog">
+	<target name="Progb">
+		<javac includeantruntime="false" srcdir='.' includes='Prog.java'/>
+	</target>
+	<target name="Prog" depends='Progb'>
+		<java classname='Prog'>
+			<classpath path='./'/>
+		</java>
+	</target>
+
+	<target name="prepare">
+		<tstamp />
+			<mkdir dir="${dir.classes}" />
+		        <mkdir dir="${dir.dist}" />
+	</target>
+	
+	<target name="javadocs" depends="prepare">
+			<mkdir dir="docs"/>
+			<javadoc packagenames="**" sourcepath="." destdir="docs" classpath="." author="true" version="true" use="true" >
+				<fileset dir="." includes="*.java" />
+			</javadoc>
+	</target>
+</project>

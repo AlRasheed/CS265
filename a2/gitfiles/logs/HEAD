@@ -1,0 +1,13 @@
+0000000000000000000000000000000000000000 dd8f1de49ba82173fb116047a52df30e6801f47d Neil Castelino <neil.fl93@gmail.com> 1367674922 -0400	commit (initial): Added bare main, infix2postfix defs
+dd8f1de49ba82173fb116047a52df30e6801f47d 804f136a040c30027f89bd91bee9ffd6bfb6cb82 Neil Castelino <neil.fl93@gmail.com> 1367712147 -0400	commit: Split the infix wrt \s and wrote a little on how i would pop elements from the stack
+804f136a040c30027f89bd91bee9ffd6bfb6cb82 1257747d1efe2342347344507349993c2c106085 Neil Castelino <neil.fl93@gmail.com> 1367712283 -0400	commit: modified incomplete loop
+1257747d1efe2342347344507349993c2c106085 b33eb29b60e1cdc18d083f122335c3ea413574ab Neil Castelino <nac78@cs.drexel.edu> 1368115365 -0400	commit: works a bit
+b33eb29b60e1cdc18d083f122335c3ea413574ab dd32b74b15b4e988d9880b10142d4af220f1f15d Neil Castelino <nac78@cs.drexel.edu> 1368123179 -0400	commit: Got infix2postfix working
+dd32b74b15b4e988d9880b10142d4af220f1f15d d8c4c6ee10cfc2dd58ccdebd0db70c9022cd688b Neil Castelino <nac78@cs.drexel.edu> 1368124147 -0400	commit: made definitions for evalpostfix
+d8c4c6ee10cfc2dd58ccdebd0db70c9022cd688b 62a2765d0c7a44a0d06ddbd65f2587fbe5b6300b Neil Castelino <nac78@cs.drexel.edu> 1368126957 -0400	commit: evalPostfix is alsmot done
+62a2765d0c7a44a0d06ddbd65f2587fbe5b6300b ab85919001fd636da2964485690dfd6ed66b7e36 Neil Castelino <nac78@cs.drexel.edu> 1368143136 -0400	commit: got rid of debug statements
+ab85919001fd636da2964485690dfd6ed66b7e36 f40bebe6e9888239feb29b731570d4da2f48dd4c Neil Castelino <nac78@cs.drexel.edu> 1368143307 -0400	commit: Almost final. Working well
+f40bebe6e9888239feb29b731570d4da2f48dd4c 6becafe015c8dcbe5095a34fb1b8d1304576f27e Neil Castelino <nac78@cs.drexel.edu> 1368143362 -0400	commit: Removed phantom return statement
+6becafe015c8dcbe5095a34fb1b8d1304576f27e 80a9e2896571082e211d3cc14524f74bf755d3a8 Neil Castelino <nac78@cs.drexel.edu> 1368143476 -0400	commit: removed re import
+80a9e2896571082e211d3cc14524f74bf755d3a8 34b2dc223af7727f148b6fb5bbdb48836b67a5af Neil Castelino <nac78@cs.drexel.edu> 1368143703 -0400	commit: made a procedure to find is a char is an operator
+34b2dc223af7727f148b6fb5bbdb48836b67a5af ad397a0a4295b33cbc626938bb503eefcf9323cc Neil Castelino <nac78@cs.drexel.edu> 1368143764 -0400	commit: implemented it

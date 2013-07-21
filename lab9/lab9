@@ -1,0 +1,51 @@
+1.1
+There was a segmentation fault. There is a new file named core in the directory.
+
+1.2
+It failed in the inTable() at strcmp()
+
+1.3a
+The line 
+#2  0x00000000004005c5 in main () at bug1.c:7
+indicated that the bug was on line 7.
+I changed scanf( "%d", n ); to scanf( "%d", &n );
+
+1.3b
+I changed printf("Pi=%d, n=%f\n", pi, n); to printf("Pi=%f, n=%d\n", pi, n);
+Since pi is a double, printf shouldn't output an integer and since n is an integer, printf shouldn't output a floating point number.
+
+1.3c
+In the while loop:
+while( numLines<MAX_LINES && fgets( buff, MAX_LINE_LEN, fin ))
+{
+	++numLines;
+	st[ numLines ] = strdup( buff );
+	printf("%s\n", st[numLines]);
+}
+
+I changed the incrementation of numLines from before to after the assignment of the string is done to the array. In the original context, the first string was assigned to st[1] instead of st[0] which the inTable() was checking.
+It is now:
+
+while( numLines<MAX_LINES && fgets( buff, MAX_LINE_LEN, fin )) 
+{
+	st[ numLines ] = strdup( buff );
+	printf("%s\n", st[numLines]);
+	++numLines; 
+}
+
+1.3d
+I changed scanf("%d",n); to scanf("%d",&n); on line 22 since gdb showed this line:
+#2  0x00000000004006de in main () at avg.c:22
+
+1.3e
+The pivot element wasn't moved to the first position.
+swap(v,0,rand() % n);
+assert((last >= 0) && (last < n));
+
+1.4
+A compiler can't catch the mismatch because we're passing pointers to the functions and not actual data types. Also, the parameters for the functions icmp and scmp have the same argument types.
+
+1.5
+It fails with a segmentation fault.
+
+

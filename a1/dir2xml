@@ -1,0 +1,94 @@
+#!/bin/bash
+
+#echo $#
+dirtocheck='.'
+element=''
+xml=''
+files_discovered=()
+files_other=()
+
+if [ $# -gt 0 ]; then
+	dirtocheck=$1;
+fi
+
+for directory in $(find $dirtocheck -type d) 
+do
+	if [[ "$directory" =~ \.git ]]; then
+		continue
+	fi
+	#if [ -e "$directory/README" ]; then
+	#	./parser "$directory/README"
+	#fi
+
+	if [ -e "$directory/README" ]; then
+		xml="$directory/dir.xml"
+		touch $xml
+		echo '<?xml version="1.0" encoding="ISO-8859-1"?>' > $xml
+		echo '<direntry>' >> $xml
+		for line in $(./parser "$directory/README"); do
+			if [[ "$line" == 'index' || "$line" == 'required' || "$line" == 'other' ]] ;
+			then
+				if [[ -z $element ]] ; then
+					element="$line"
+					echo -e "\t<$element>" >> $xml
+				elif [[ ! -z $element && $element != "$line" ]] ; then
+					echo -e "\t</$element>" >> $xml
+					element="$line"
+					echo -e "\t<$element>" >> $xml
+				fi
+				continue
+			fi
+
+			if [[ ! -d "$directory/$line" ]] ; then
+				echo -e "\t\t<file>$line</file>" >> $xml
+			else
+				echo -e "\t\t<dir>$line</dir>" >> $xml
+			fi
+
+			files_discovered=("${files_discovered[@]}" "$line")
+		done
+		echo -e "\t</$element>" >> $xml
+
+		exists=0
+
+		for file in `ls $directory`
+		do
+			for discovered in ${files_discovered[@]} 
+			do
+				if [[ "$file" == "$discovered" ]]; then
+					exists=1
+				fi
+			done
+
+			if [[ $exists -eq 0 ]]; then
+				if [[ "$file" != "dir.xml" && $file =~ [^\w] ]]; then
+					files_other=("${files_other[@]}" "$file")
+				fi
+			fi
+
+			exists=0
+	
+		done
+
+		#echo ${files_discovered[@]}
+	fi
+	element=''
+	files_discovered=('')
+	if [[ ${#files_other[@]} -gt 0 ]]; then
+		echo -e "\t<other>" >> $xml
+		for file in ${files_other[@]}
+		do
+			if [[ "$file" == "\n" ]]; then
+				continue;
+			fi
+			if [[ ! -d "$directory/$file" ]] ; then
+				echo -e "\t\t<file>$file</file>" >> $xml
+			else
+				echo -e "\t\t<dir>$file</dir>" >> $xml
+			fi
+		done
+		echo -e "\t</other>" >> $xml
+	fi
+	echo "</direntry>" >> $xml
+	files_other=('')
+done

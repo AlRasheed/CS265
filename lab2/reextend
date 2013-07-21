@@ -1,0 +1,8 @@
+#!/bin/bash
+# accepts two file extensions as command line arguments and renames all files 
+# with the first extension within the current working directory to have the 
+# second extension instead. 
+
+for file in *$1; do
+	mv "$file" "${file%$1*}$2"
+done

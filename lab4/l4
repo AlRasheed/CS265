@@ -1,0 +1,88 @@
+1.1
+We already know that 0 means false and 1 means true.
+
+1.2
+int IsSmaller(char *first, char *second) {
+	if (strcmp(first,second) < 1)
+		return 1;
+	else
+		return 0;
+	}
+
+1.3
+It makes no sense.
+
+1.4
+if (c!='y' && c!='Y') 
+	return;
+
+if(length > BUFSIZE) {
+	length = BUFSIZE;
+}
+
+flag = !flag;
+
+quote = 0;
+if (strcmp(*line, '"')==0) {
+	quote = 1;
+}
+
+bit = (val & 1) ? 1 : 0;
+
+1.5
+We don't know in which order the read routines are called. Also, the naming is not clear and we do not know what the code does.
+
+1.6
+2 1
+
+1.7
+if (!stty(stdin) && !istty(stdout) && !stty(stderr))
+	return(0);
+
+return retval;
+
+for(k=0; k<4; k++) {
+	scanf("%lf", &dx);
+	x += dx;
+}
+
+1.8
+for (int count=0; count<total; count++) {
+	if(this.getName.(count) == nametable.userName()) {
+		return(true);
+	}
+}
+
+1.9
+The macro doesn't have parantheses around the variable 'c'.
+Also, the macro gets executed multiple times as the variable c occurs multiple times in the macro.
+
+1.10
+#define METER_PER_FEET 	0.3048
+#define FEET_PER_METER 	3.2084
+#define FEET_PER_MILE	5280.0
+#define KILOMETER_PER_MILE	1.609344
+#define SQUARE_KM_PER_SQUARE_MILE	2.589988
+
+1.11
+1st comment says that a void function returns a value which is wrong
+2nd comment states what we know about the % operator. It doesn't say anything about the n>MAX condition though.
+3rd comment doesn't say what is being printed out.
+4th comment is duplicated. It is the same as the 5th
+5th comment is a duplicate of the 4th and the operation is known
+5th comment tells us something we already know
+
+2.1 
+Submitted 
+
+2.2
+Submitted
+
+2.3
+Submitted
+
+2.4
+Submitted
+
+2.5
+Submitted

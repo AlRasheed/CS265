@@ -1,0 +1,7 @@
+
+test-java: $(TEST_OUT) $(EXP_OUT) 
+	-@if diff test.out expected.out &> /dev/null ; then \
+		echo "Passed!" ;\
+	 else \
+		echo "Not the same!" ;\
+	fi

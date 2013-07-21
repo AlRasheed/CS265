@@ -1,0 +1,26 @@
+1.i.
+Implementation must be hidden so that they can be worked on without involoving the user.
+1.ii.
+The interface must provide only necessary information and functionality.
+1.iii.
+An interface must not do operations that the user doesn't know about.
+1.iv.
+Similar things should be done the same way. There should be consistancy in the way we implement algorithms/functions etc.
+
+2.
+The first implementation doesn't properly process empty feilds, commas within double quotes and escaped quotes.
+
+3.
+The second implementation processes empty feilds, commas within double quotes and escaped quotes.
+
+4.
+The first revision can't read in a csv file. 
+No, we cannot parse multiple csv files with C due to the absence of classes. C is not object oriented and doesn't have classes.
+
+5.
+We can't read in csv files using arguments.
+
+6.
+Yes
+
+7.

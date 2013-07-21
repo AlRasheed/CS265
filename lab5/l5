@@ -1,0 +1,62 @@
+1
+List: It is a set of items with data and a pointer which points to the next item. It consists of a head which points to the first item and the last item points to NULL.
+Stack: A stack is a type of list where items are inserted and removed in a last in-first out order.
+Queue: A queue is a type of list where items are inserted and removed in a first in-first out order.
+Dictionary: It is a datatype which holds satellite data with a key associated with it.
+
+2.
+A binary search will compare elements at most log2(n) times. Since binary search drops off half the elements with each check, this is is the number of times we can divide n by two before it reaches the item we are searching for. 
+
+3.
+A linear search will compare all n elements in the array at most. Since a linear search checks each element one by one, and if the element to be found is one of the last elements in the array, the search will have to go through all the elements before it to find it.
+
+4.
+When dealing with lists
+When the list isn't sorted.
+
+5.
+*84* 37 93 82 98 27 63 73 93 27 75 55 45 8
+37 82 27 63 73 27 75 55 45 8 *84* 93 98 93
+*37* 82 27 63 73 27 75 55 45 8    84    *93* 98 93
+27 27 8 *37* 82 63 73 75 55 45    84    *93* 98 93
+*27* 27 8     37    *82* 63 73 75 55 45    84    93    *98* 93
+8 *27* 27     37    63 73 75 55 45 *82*    84    93    93 *98*
+8    27    27    37    *63* 73 75 77 45    82    84    93    93    98
+8    27    27    37    45 *63* 73 75 77    82    84    93    93    98
+8    27    27    37    45    63    *73* 75 77    82    84    93    93    98
+8    27    27    37    45    63    *73* 75 77    82    84    93    93    98
+8    27    27    37    45    63    73    *75* 77    82    84    93    93    98
+8    27    27    37    45    63    73    75    77    82    84    93    93    98
+
+6.
+L ->3 ->24 ->06 ->NULL
+
+7.
+L ->[13,[28,[13,[24,NONE]]]]
+
+8.
+For the last set, 100 bytes was alloocated to the pointer s while the container called buffer was still holding onto its own contents. The pointer s was able to point to upto 100 bytes which included the data after the buffer container as well.
+
+9.
+0
+1
+2
+3->[Cos,86]->[Bob,38]
+4->[Jaga,24]->[Kate,28]->[Nash,11]->[Vera,99]
+5->[Jesse,78]
+6
+
+
+10. I've also attached the source code in hash.c
+int find( char *key, int *p_ans ) {
+	entry *e;
+	int h;
+	h = hash(key);
+
+	for(e = table[h];e!=NULL;e=e->next) 
+		if(strcmp(key,e->key)==0) {
+			*p_ans = e->val;
+			return 1;
+		}
+	return 0;
+}

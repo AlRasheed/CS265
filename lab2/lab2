@@ -1,0 +1,39 @@
+1. The output shows us the files which have been modified 2 days ago.
+
+2. find . -name '*.bash'
+
+3. The output is:
+./tmp/gotMe.bash
+./CS265/lab1/hello.bash
+
+4. 
+Characters: wc -c breadIsDangerous.txt
+Result: 2538 Characters
+
+Words: wc -w breadIsDangerous.txt
+Result: 421 words
+
+Lines: wc -l breadIsDangerous.txt
+Result: 73 lines
+
+5. grep 'the' breadIsDangerous.txt | wc -l
+
+6. The original file spellExample is backed up as spellExample.bak 
+
+7. It showed the lines where ispell made changes to spellings.
+
+8. There was no output as we were comparing the same file.
+
+9. 
+When we grep'd dough from breadIsDangerous.txt, grep completed successfully and there were no errors. Thus it had a reutrn value of 0.
+When we grep'd uniqueString from breadIsDangerous.txt, grep didn't find such a string and had a return value of 1 as it wasn't successful.
+When we grep'd dough from noSuchFile, grep couldn't find a file as such and thus couldn't find a string 'dough'. Due to these, the return value was 2.
+
+10.
+uploaded
+
+11.
+uploaded
+
+12.
+uploaded

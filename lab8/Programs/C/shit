@@ -1,0 +1,6 @@
+f_desc for stdout is: 1
+I'm writing to, what, a pipe?
+Got an error: 25
+EBADF has value: 9
+EINVAL has value: 22
+f_desc for tmpf is: 3

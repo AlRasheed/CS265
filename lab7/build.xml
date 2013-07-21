@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<project>
+	<target name="prob1b">
+		<javac includeantruntime="false" srcdir='.' includes='prob1.java'/>
+	</target>
+	<target name="prob1" depends='prob1b'>
+		<java classname='prob1'>
+			<classpath path='./'/>
+			<arg value='CS265'/>
+		</java>
+	</target>
+
+	<target name="prob2b">
+		<javac includeantruntime="false" srcdir='.' includes='prob2.java'/>
+	</target>
+	<target name="prob2" depends='prob2b'>
+		<java classname='prob2'>
+			<classpath path='./'/>
+			<arg value='2013'/>
+		</java>
+	</target>
+
+	<target name="prob3b">
+		<javac includeantruntime="false" srcdir='.' includes='prob3.java'/>
+	</target>
+	<target name="prob3" depends='prob3b'>
+		<java classname='prob3'>
+			<classpath path='./'/>
+			<arg value='2013'/>
+		</java>
+	</target>
+
+	<target name="prob4b">
+		<javac includeantruntime="false" srcdir='.' includes='prob4.java'/>
+	</target>
+	<target name="prob4" depends='prob4b'>
+		<java classname='prob4'>
+			<classpath path='./'/>
+			<arg value='3'/>
+		</java>
+	</target>
+</project>
